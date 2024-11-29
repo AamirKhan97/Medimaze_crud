@@ -1,0 +1,44 @@
+#sidebarBase {
+  height: calc(100vh - 120px);
+  width: 250px;
+  background-color: #000;
+  border: 1px solid #fff;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  padding: 20px;
+  .linkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      &:hover {
+        color: lightblue;
+      }
+    }
+  }
+  .linkBoxActive {
+    background-color: grey;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+}

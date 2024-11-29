@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/main.scss";
+import "./App.css";
+import Login from "./components/Login";
+import { useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Admin from "./components/Admin";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import AddUser from "./components/AddUser";
+import EditUser from "./components/EditUser";
 
 function App() {
+  const location = useLocation();
+  const shouldHideHeaderFooter = location.pathname === "/";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!shouldHideHeaderFooter && <Header />}
+      {!shouldHideHeaderFooter && <Sidebar />}
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Admin-panel" element={<Admin />} />
+        <Route path="/Add-user" element={<AddUser />} />
+        <Route path="/Edit-user/:id" element={<EditUser />} />
+      </Routes>
+      {!shouldHideHeaderFooter && <Footer />}
+    </>
   );
 }
 

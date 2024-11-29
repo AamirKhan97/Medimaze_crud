@@ -1,0 +1,32 @@
+#headerbase {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px 20px 10px 70px;
+  background-color: #000;
+  .header {
+    color: #fff;
+    font-weight: 600;
+  }
+  .leftBox {
+    display: flex;
+  }
+  .userIcon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0px;
+      border: none;
+    }
+  }
+}

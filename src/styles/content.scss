@@ -1,0 +1,14 @@
+.Content-Base {
+  height: calc(100vh - 60px);
+  width: 100%;
+  padding: 80px 20px 80px 280px;
+  .add-user-btn {
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+}
